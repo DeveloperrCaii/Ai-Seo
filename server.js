@@ -26,6 +26,12 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// ==================== GOOGLE VERIFICATION ROUTE ====================
+// Tambahkan ini sebelum app.use(express.static(...))
+app.get('/googlea13f6d68fb4f3338.html', (req, res) => {
+    res.send('google-site-verification: googlea13f6d68fb4f3338.html');
+});
+
 // Middleware
 app.use(cors({
   origin: true,
